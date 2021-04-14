@@ -137,7 +137,7 @@ sensor:
       then:
         - sensor.template.publish:
             id: battery
-            state: !lambda return ((x - 2.5) / 0.4 * 100.0);
+            state: !lambda return ((x - 2.45) / 0.55 * 100.0);
     
   - platform: template
     name: ${friendly_name} battery
