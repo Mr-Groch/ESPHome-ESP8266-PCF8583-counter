@@ -137,7 +137,7 @@ sensor:
       then:
         - sensor.template.publish:
             id: battery
-            state: !lambda return ((x - 2.45) / 0.55 * 100.0);
+            state: !lambda return (x);
     
   - platform: template
     name: ${friendly_name} battery
@@ -145,6 +145,17 @@ sensor:
     icon: mdi:battery
     accuracy_decimals: 0
     id: battery
+    filters:
+      - calibrate_polynomial:
+          degree: 3
+          datapoints:
+            - 2.45 -> 0.0
+            - 2.5 -> 10.0
+            - 2.6 -> 20.0
+            - 2.65 -> 50.0
+            - 2.91 -> 95.0
+            - 2.95 -> 99.0
+            - 3.0 -> 100.0
 
   - platform: wifi_signal
     name: ${friendly_name} WiFi signal
