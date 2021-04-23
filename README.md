@@ -1,6 +1,15 @@
 # ESPHome-ESP8266-PCF8583-counter
 Battery impulse counter based on ESPHome with ESP8266 and PCF8583 acting as hardware counter
 
+Components:
+- [ESP8266 Module](https://aliexpress.com/item/32665100123.html) (for example NodeMCU)
+- [Photoresistor Module](https://aliexpress.com/item/32767875194.html)
+- [PCF8583 Real Time Clock](https://aliexpress.com/item/32601793278.html)
+- 1KΩ Resistor
+- 100nf Capacitor
+- 3.3V LiFePO4 battery
+- Prototype board and some wires
+
 Example configuration for energy meter with 6400 impulses per kWh. You can change that in yaml:
 
 ```yaml
