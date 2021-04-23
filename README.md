@@ -6,7 +6,7 @@ Components:
 - [Photoresistor Module](https://aliexpress.com/item/32767875194.html)
 - [PCF8583 Real Time Clock](https://aliexpress.com/item/32601793278.html)
 - 1KΩ Resistor
-- 100nf Capacitor
+- 100nF Capacitor
 - 3.3V LiFePO4 battery
 - Prototype board and some wires
 
