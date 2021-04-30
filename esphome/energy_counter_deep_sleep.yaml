@@ -163,6 +163,14 @@ sensor:
             - 2.70 -> 14
             - 2.55 -> 9
             - 2.35 -> 0
+      - lambda: |-
+          if (x < 0.0) {
+            return 0.0;
+          }
+          if (x > 100.0) {
+            return 100.0;
+          }
+          return x;
 
   - platform: wifi_signal
     name: ${friendly_name} WiFi signal
