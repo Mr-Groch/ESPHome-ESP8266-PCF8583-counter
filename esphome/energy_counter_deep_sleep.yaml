@@ -147,7 +147,7 @@ sensor:
     id: battery
     filters:
       - calibrate_polynomial:
-          degree: 5
+          degree: 3
           datapoints:
             - 3.00 -> 100
             - 2.92 -> 99
